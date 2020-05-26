@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	min-height: 100vh;
+	min-width: 100vh;
+	overflow-x: hidden;
+	border-radius: 50px;
+	/*CHANGE*/
+	background: #000079;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 31px;
+	/*CHANGE*/
+	background: linear-gradient(315deg, #000081, #00006d);
+	box-shadow:  -14px -14px 28px #000030, 
+	14px 14px 28px #0000c2;
+
+	padding: 2em;
+}
+h1 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 2rem;
+	color: #00ffff;
+	padding-bottom: .5em;
+	padding-top: 0;
+	transition: 0.8s ease;
+}
+.screen {
+	font-family: 'Poppins', sans-serif;
+	font-size: 2.5rem;
+	width: 100%;
+	padding: 0.5rem;
+	border-radius: 10px;
+	background: linear-gradient(315deg, #252532, #2c2c3c);
+	box-shadow:  -5px -5px 10px #121218, 
+	5px 5px 10px #404058;
+	color: #eee;
+	border: 5px solid #797F78;
+	text-align: right;
+	letter-spacing: 5px;
+	transition: 2s ease;
+}
+.screen:focus {
+	outline: none;
+}
+.buttons {
+	width: 100%;
+	padding-top: 18px;
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: repeat(4, 1fr);	
+}
+.btn {
+	padding: .7rem 0;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3em;
+	font-weight: bolder;
+	color: #aeaeae;
+	border-radius: 15%;
+	/*CHANGE*/
+	background: linear-gradient(45deg, #000081, #00006d);
+	box-shadow:  9px -9px 18px #000056, 
+	-9px 9px 18px #00009c;
+	transition: .2s ease all;
+}
+.btn:active {	
+	transform: scale(0.88);
+}
+.btn-clear {
+	color: #f80000;
+}
+.btn-operator {
+	font-size: 4em;
+	color: #F56400;
+}
+.btn-equal {
+	color: #01F802;
+	font-size: 4em;
+}
+.btn-long {
+	grid-row: span 2;
+}
+.btn-wide {
+	grid-column: span 2;
+}
+.theme {
+	position: absolute;
+	top: 4em;
+	right: 4em;
+}
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 6em;
+	height: 2.2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #403c42;
+	box-shadow: inset -2px -2px 5px #242225, 
+	inset 2px 2px 5px #5c565f;
+	transition: .4s;
+}
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 3em;
+	width: 3em;
+	left: -2px;
+	bottom: -6.8px;
+	background: #3c24db;
+	box-shadow:  -2px -2px 7px #23157f, 
+	2px 2px 7px #5533ff;	
+	transition: .4s ease;
+}
+
+input:checked + .slider {
+	background: #c0c0c0;
+	box-shadow: inset -1px -1px 4px #6c6c6c, 
+	inset 1px 1px 4px #ffffff;
+}
+input:checked + .slider:before {
+	transform: translateX(3.2em);
+	background: #41e0fc;
+	box-shadow:  -1px -1px 4px #2fa1b5, 
+	1px 1px 4px #53ffff;
+}
+.slider.round {
+	border-radius: 35px;
+}
+.slider.round:before {
+	border-radius: 50%;
+}
+label .theme-text {
+	position: relative;
+	top: 53px;
+	left: 24px;
+	font-family: 'Montserrat',sans-serif;
+	color: #eee;
+	font-size: 1.2em;
+	font-weight: bold;
+	transition: 0.7s ease all;
+}
+footer {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	width: 100%;
+	text-align: right;
+}
+footer h3 {
+	font-family: 'Montserrat', sans-serif;
+	color: #ff0080;
+	font-weight: bolder;
+}
